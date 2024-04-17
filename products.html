@@ -16,6 +16,7 @@
 
 <body>
     <header>
+        <!-- Navbar -->
         <nav class="navbar bg-dark border-bottom border-body d-block d-md-none" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Bootstrap Dashboard</a>
@@ -40,7 +41,8 @@
         </nav>
     </header>
 
-    <main class="d-flex">
+    <main class="d-flex overflow-hidden">
+        <!-- Sidebar -->
         <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark min-vh-100 d-none d-md-block"
             style="max-width: 260px;">
             <div class="row">
@@ -95,19 +97,22 @@
             </div>
 
         </div>
-        <div class="container-fluid row m-auto">
-            <div class="container vh-100 flex-grow-1 px-0">
-
+        <!-- Products Section -->
+        <div class="container-fluid row m-auto vh-100 overflow-y-auto">
+            <div class="container vh-100 flex-grow-1 px-0 px-md-3 px-lg-3">
+                <!-- Inizio Lista Oggetti -->
                 <ul class="list-group list-group-flush">
+                    <!-- Prodotti Trovati -->
                     <li class="list-group-item">
                         <div class="d-flex gap-2 w-100 align-items-center justify-content-between py-2">
                             <h2 class="mb-0 fw-semibold">10 Prodotti Trovati</h2>
-                            <div>
-                                <button>dfdfsd</button>
-                                <button>fsdfsd</button>
+                            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                <button type="button" class="btn btn-outline-secondary py-1">Esporta</button>
+                                <button type="button" class="btn btn-outline-secondary py-1">Nuovo</button>
                             </div>
                         </div>
                     </li>
+                    <!-- Intestazioni Prodotti -->
                     <li class="list-group-item fw-bold ps-2 pt-4">
                         <div class="row">
                             <div class="col-10 col-sm-8 col-md-6 col-lg-9">
@@ -124,35 +129,371 @@
                             </div>
                         </div>
                     </li>
+                    <!-- Product -->
                     <li class="list-group-item ps-2">
                         <div class="row align-items-center">
                             <div class="col-10 col-sm-8 col-md-6 col-lg-9 d-flex">
+                                <!-- Product Image -->
                                 <div class="pe-3">
                                     <img src="https://picsum.photos/seed/picsum/50/50" alt="product-img">
                                 </div>
+                                <!-- Product Name and Description -->
                                 <div>
                                     <span class="fw-semibold fs-6">Smarphone Samsung Galaxy S21</span>
-                                    <small class="d-none d-xl-block opacity-50 fs-7">Display AMOLED, Fotocamera Ultra
+                                    <small class="d-none d-xl-block opacity-50">Display AMOLED, Fotocamera Ultra
                                         Wide,
                                         Batteria a lunga durata</small>
                                 </div>
-
                             </div>
+                            <!-- Product Price -->
                             <div class="col-2 col-lg-1 d-none d-sm-block text-center">
                                 <div>799.00 &euro;</div>
                             </div>
+                            <!-- Product Availability -->
                             <div class="col-2 col-lg-1 d-none d-md-block text-center">
-                                <div>Stato</div>
+                                <div><i
+                                        class="fas fa-check border border-2 border-success rounded-circle p-2 text-success"></i>
+                                </div>
                             </div>
+                            <!-- Edit and Delete Buttons -->
                             <div class="col-2 col-lg-1 text-center">
-                                <div>Azioni</div>
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary border-2 py-1 px-2 me-1"><i
+                                            class="fa-solid fa-pencil"></i></button>
+                                    <button type="button" class="btn btn-outline-danger border-2 py-1 px-2"><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Product -->
+                    <li class="list-group-item ps-2">
+                        <div class="row align-items-center">
+                            <div class="col-10 col-sm-8 col-md-6 col-lg-9 d-flex">
+                                <!-- Product Image -->
+                                <div class="pe-3">
+                                    <img src="https://picsum.photos/seed/picsum/50/50" alt="product-img">
+                                </div>
+                                <!-- Product Name and Description -->
+                                <div>
+                                    <span class="fw-semibold fs-6">Apple MacBook Pro 13"</span>
+                                    <small class="d-none d-xl-block opacity-50">Processore M1, SSD ultraveloce, Display
+                                        Retina</small>
+                                </div>
+                            </div>
+                            <!-- Product Price -->
+                            <div class="col-2 col-lg-1 d-none d-sm-block text-center">
+                                <div>1299.00 &euro;</div>
+                            </div>
+                            <!-- Product Availability -->
+                            <div class="col-2 col-lg-1 d-none d-md-block text-center">
+                                <div><i
+                                        class="fas fa-check border border-2 border-success rounded-circle p-2 text-success"></i>
+                                </div>
+                            </div>
+                            <!-- Edit and Delete Buttons -->
+                            <div class="col-2 col-lg-1 text-center">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary border-2 py-1 px-2 me-1"><i
+                                            class="fa-solid fa-pencil"></i></button>
+                                    <button type="button" class="btn btn-outline-danger border-2 py-1 px-2"><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Product -->
+                    <li class="list-group-item ps-2">
+                        <div class="row align-items-center">
+                            <div class="col-10 col-sm-8 col-md-6 col-lg-9 d-flex">
+                                <!-- Product Image -->
+                                <div class="pe-3">
+                                    <img src="https://picsum.photos/seed/picsum/50/50" alt="product-img">
+                                </div>
+                                <!-- Product Name and Description -->
+                                <div>
+                                    <span class="fw-semibold fs-6">Smartwatch Apple Watch Series 6</span>
+                                    <small class="d-none d-xl-block opacity-50">Monitoraggio attività, Misurazione
+                                        ossigeno nel sangue, Display Always-On</small>
+                                </div>
+                            </div>
+                            <!-- Product Price -->
+                            <div class="col-2 col-lg-1 d-none d-sm-block text-center">
+                                <div>429.00 &euro;</div>
+                            </div>
+                            <!-- Product Availability -->
+                            <div class="col-2 col-lg-1 d-none d-md-block text-center">
+                                <div><i
+                                        class="fas fa-check border border-2 border-success rounded-circle p-2 text-success"></i>
+                                </div>
+                            </div>
+                            <!-- Edit and Delete Buttons -->
+                            <div class="col-2 col-lg-1 text-center">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary border-2 py-1 px-2 me-1"><i
+                                            class="fa-solid fa-pencil"></i></button>
+                                    <button type="button" class="btn btn-outline-danger border-2 py-1 px-2"><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Product -->
+                    <li class="list-group-item ps-2">
+                        <div class="row align-items-center">
+                            <div class="col-10 col-sm-8 col-md-6 col-lg-9 d-flex">
+                                <!-- Product Image -->
+                                <div class="pe-3">
+                                    <img src="https://picsum.photos/seed/picsum/50/50" alt="product-img">
+                                </div>
+                                <!-- Product Name and Description -->
+                                <div>
+                                    <span class="fw-semibold fs-6">Auricolari Wireless Apple AirPods Pro</span>
+                                    <small class="d-none d-xl-block opacity-50">Cancellazione attiva del rumore,
+                                        Resistenza all'acqua e al sudore</small>
+                                </div>
+                            </div>
+                            <!-- Product Price -->
+                            <div class="col-2 col-lg-1 d-none d-sm-block text-center">
+                                <div>279.00 &euro;</div>
+                            </div>
+                            <!-- Product Availability -->
+                            <div class="col-2 col-lg-1 d-none d-md-block text-center">
+                                <div><i
+                                        class="fas fa-check border border-2 border-success rounded-circle p-2 text-success"></i>
+                                </div>
+                            </div>
+                            <!-- Edit and Delete Buttons -->
+                            <div class="col-2 col-lg-1 text-center">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary border-2 py-1 px-2 me-1"><i
+                                            class="fa-solid fa-pencil"></i></button>
+                                    <button type="button" class="btn btn-outline-danger border-2 py-1 px-2"><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Product -->
+                    <li class="list-group-item ps-2">
+                        <div class="row align-items-center">
+                            <div class="col-10 col-sm-8 col-md-6 col-lg-9 d-flex">
+                                <!-- Product Image -->
+                                <div class="pe-3">
+                                    <img src="https://picsum.photos/seed/picsum/50/50" alt="product-img">
+                                </div>
+                                <!-- Product Name and Description -->
+                                <div>
+                                    <span class="fw-semibold fs-6">Console Sony PlayStation 5</span>
+                                    <small class="d-none d-xl-block opacity-50">Gaming ad alta definizione, Tempi di
+                                        caricamento rapidi, Supporto per giochi 4K</small>
+                                </div>
+                            </div>
+                            <!-- Product Price -->
+                            <div class="col-2 col-lg-1 d-none d-sm-block text-center">
+                                <div>499.00 &euro;</div>
+                            </div>
+                            <!-- Product Availability -->
+                            <div class="col-2 col-lg-1 d-none d-md-block text-center">
+                                <div><i
+                                        class="fas fa-check border border-2 border-success rounded-circle p-2 text-success"></i>
+                                </div>
+                            </div>
+                            <!-- Edit and Delete Buttons -->
+                            <div class="col-2 col-lg-1 text-center">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary border-2 py-1 px-2 me-1"><i
+                                            class="fa-solid fa-pencil"></i></button>
+                                    <button type="button" class="btn btn-outline-danger border-2 py-1 px-2"><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Product -->
+                    <li class="list-group-item ps-2">
+                        <div class="row align-items-center">
+                            <div class="col-10 col-sm-8 col-md-6 col-lg-9 d-flex">
+                                <!-- Product Image -->
+                                <div class="pe-3">
+                                    <img src="https://picsum.photos/seed/picsum/50/50" alt="product-img">
+                                </div>
+                                <!-- Product Name and Description -->
+                                <div>
+                                    <span class="fw-semibold fs-6">Monitor Gaming ASUS ROG Strix XG27UQ</span>
+                                    <small class="d-none d-xl-block opacity-50">Schermo 4K UHD, Frequenza di
+                                        aggiornamento 144Hz, Tecnologia HDR</small>
+                                </div>
+                            </div>
+                            <!-- Product Price -->
+                            <div class="col-2 col-lg-1 d-none d-sm-block text-center">
+                                <div>999.00 &euro;</div>
+                            </div>
+                            <!-- Product Availability -->
+                            <div class="col-2 col-lg-1 d-none d-md-block text-center">
+                                <div><i
+                                        class="fas fa-check border border-2 border-success rounded-circle p-2 text-success"></i>
+                                </div>
+                            </div>
+                            <!-- Edit and Delete Buttons -->
+                            <div class="col-2 col-lg-1 text-center">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary border-2 py-1 px-2 me-1"><i
+                                            class="fa-solid fa-pencil"></i></button>
+                                    <button type="button" class="btn btn-outline-danger border-2 py-1 px-2"><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Product -->
+                    <li class="list-group-item ps-2">
+                        <div class="row align-items-center">
+                            <div class="col-10 col-sm-8 col-md-6 col-lg-9 d-flex">
+                                <!-- Product Image -->
+                                <div class="pe-3">
+                                    <img src="https://picsum.photos/seed/picsum/50/50" alt="product-img">
+                                </div>
+                                <!-- Product Name and Description -->
+                                <div>
+                                    <span class="fw-semibold fs-6">Stampante Multifunzione HP LaserJet Pro MFP
+                                        M28w</span>
+                                    <small class="d-none d-xl-block opacity-50">Stampa, Scansione, Copia, Connessione
+                                        Wi-Fi</small>
+                                </div>
+                            </div>
+                            <!-- Product Price -->
+                            <div class="col-2 col-lg-1 d-none d-sm-block text-center">
+                                <div>159.00 &euro;</div>
+                            </div>
+                            <!-- Product Availability -->
+                            <div class="col-2 col-lg-1 d-none d-md-block text-center">
+                                <div><i
+                                        class="bi bi-x border border-2 border-danger rounded-circle text-danger px-1 fs-4"></i>
+                                </div>
+                            </div>
+                            <!-- Edit and Delete Buttons -->
+                            <div class="col-2 col-lg-1 text-center">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary border-2 py-1 px-2 me-1"><i
+                                            class="fa-solid fa-pencil"></i></button>
+                                    <button type="button" class="btn btn-outline-danger border-2 py-1 px-2"><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Product -->
+                    <li class="list-group-item ps-2">
+                        <div class="row align-items-center">
+                            <div class="col-10 col-sm-8 col-md-6 col-lg-9 d-flex">
+                                <!-- Product Image -->
+                                <div class="pe-3">
+                                    <img src="https://picsum.photos/seed/picsum/50/50" alt="product-img">
+                                </div>
+                                <!-- Product Name and Description -->
+                                <div>
+                                    <span class="fw-semibold fs-6">Router Wi-Fi Mesh TP-Link Deco X20</span>
+                                    <small class="d-none d-xl-block opacity-50">Copertura fino a 560 mq, Velocità fino a
+                                        1800 Mbps, Gestione tramite app</small>
+                                </div>
+                            </div>
+                            <!-- Product Price -->
+                            <div class="col-2 col-lg-1 d-none d-sm-block text-center">
+                                <div>199.00 &euro;</div>
+                            </div>
+                            <!-- Product Availability -->
+                            <div class="col-2 col-lg-1 d-none d-md-block text-center">
+                                <div><i
+                                        class="fas fa-check border border-2 border-success rounded-circle p-2 text-success"></i>
+                                </div>
+                            </div>
+                            <!-- Edit and Delete Buttons -->
+                            <div class="col-2 col-lg-1 text-center">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary border-2 py-1 px-2 me-1"><i
+                                            class="fa-solid fa-pencil"></i></button>
+                                    <button type="button" class="btn btn-outline-danger border-2 py-1 px-2"><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Product -->
+                    <li class="list-group-item ps-2">
+                        <div class="row align-items-center">
+                            <div class="col-10 col-sm-8 col-md-6 col-lg-9 d-flex">
+                                <!-- Product Image -->
+                                <div class="pe-3">
+                                    <img src="https://picsum.photos/seed/picsum/50/50" alt="product-img">
+                                </div>
+                                <!-- Product Name and Description -->
+                                <div>
+                                    <span class="fw-semibold fs-6">SSD NVMe Western Digital Black SN850</span>
+                                    <small class="d-none d-xl-block opacity-50">Capacità 1TB, Velocità di lettura fino a
+                                        7000 MB/s, Tecnologia PCIe Gen4</small>
+                                </div>
+                            </div>
+                            <!-- Product Price -->
+                            <div class="col-2 col-lg-1 d-none d-sm-block text-center">
+                                <div>229.00 &euro;</div>
+                            </div>
+                            <!-- Product Availability -->
+                            <div class="col-2 col-lg-1 d-none d-md-block text-center">
+                                <div><i
+                                        class="fas fa-check border border-2 border-success rounded-circle p-2 text-success"></i>
+                                </div>
+                            </div>
+                            <!-- Edit and Delete Buttons -->
+                            <div class="col-2 col-lg-1 text-center">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary border-2 py-1 px-2 me-1"><i
+                                            class="fa-solid fa-pencil"></i></button>
+                                    <button type="button" class="btn btn-outline-danger border-2 py-1 px-2"><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Product -->
+                    <li class="list-group-item ps-2">
+                        <div class="row align-items-center">
+                            <div class="col-10 col-sm-8 col-md-6 col-lg-9 d-flex">
+                                <!-- Product Image -->
+                                <div class="pe-3">
+                                    <img src="https://picsum.photos/seed/picsum/50/50" alt="product-img">
+                                </div>
+                                <!-- Product Name and Description -->
+                                <div>
+                                    <span class="fw-semibold fs-6">Mouse Gaming Logitech G502 HERO</span>
+                                    <small class="d-none d-xl-block opacity-50">Sensore HERO 25K, 11 pulsanti
+                                        programmabili, Peso personalizzabile</small>
+                                </div>
+                            </div>
+                            <!-- Product Price -->
+                            <div class="col-2 col-lg-1 d-none d-sm-block text-center">
+                                <div>79.00 &euro;</div>
+                            </div>
+                            <!-- Product Availability -->
+                            <div class="col-2 col-lg-1 d-none d-md-block text-center">
+                                <div><i
+                                        class="bi bi-x border border-2 border-danger rounded-circle text-danger px-1 fs-4"></i>
+                                </div>
+                            </div>
+                            <!-- Edit and Delete Buttons -->
+                            <div class="col-2 col-lg-1 text-center">
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-primary border-2 py-1 px-2 me-1"><i
+                                            class="fa-solid fa-pencil"></i></button>
+                                    <button type="button" class="btn btn-outline-danger border-2 py-1 px-2"><i
+                                            class="fa-solid fa-trash"></i></button>
+                                </div>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-
     </main>
     <!-- js boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
