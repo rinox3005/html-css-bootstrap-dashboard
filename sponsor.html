@@ -16,10 +16,33 @@
 
 <body>
     <header>
-
+        <!-- Navbar -->
+        <nav class="navbar bg-dark border-bottom border-body d-block d-sm-none" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Bootstrap Dashboard</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="#">Dashboard</a>
+                        <a class="nav-link active" aria-current="page" href="sponsor.html">Sponsorizzazione</a>
+                        <a class="nav-link" href="products.html">Prodotti</a>
+                        <a class="nav-link" href="new-product.html">Nuovo prodotto</a>
+                        <a class="nav-link pb-5" href="#">Clienti</a>
+                        <a class="nav-link" href="#">Impostazioni</a>
+                        <a class="nav-link" href="#">Profilo</a>
+                        <a class="nav-link" href="#">Esci</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main class="d-flex">
+        <!-- Sidebar -->
         <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark min-vh-100 d-none d-sm-block"
             style="max-width: 260px;">
             <div class="row">
@@ -77,8 +100,6 @@
         <div class="container min-vh-100 bg-primary flex-grow-1">
 
         </div>
-
-
     </main>
     <!-- js boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
