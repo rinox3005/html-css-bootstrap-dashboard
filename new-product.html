@@ -16,7 +16,8 @@
 
 <body>
     <header>
-        <nav class="navbar bg-dark border-bottom border-body d-block d-sm-none" data-bs-theme="dark">
+        <!-- Navbar -->
+        <nav class="navbar bg-dark border-bottom border-body d-block d-sm-none d-md-none" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Bootstrap Dashboard</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -40,7 +41,8 @@
         </nav>
     </header>
 
-    <main class="d-flex">
+    <main class="d-flex overflow-hidden">
+        <!-- Sidebar -->
         <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark min-vh-100 d-none d-sm-block"
             style="max-width: 260px;">
             <div class="row">
@@ -61,12 +63,13 @@
                     </li>
                     <li>
                         <a href="products.html" class="nav-link text-white">
-                            <span><i class="fa-solid fa-box-archive pe-2"></i>Prodotti</span>
+                            <span><i class="fa-solid fa-plus pe-2"></i>Prodotti</span>
                         </a>
+
                     </li>
                     <li>
                         <a href="new-product.html" class="nav-link active" aria-current="page">
-                            <span><i class="fa-solid fa-plus pe-2"></i>Nuovo Prodotto</span>
+                            <span><i class="fa-solid fa-box-archive pe-2"></i>Nuovo Prodotto</span>
                         </a>
                     </li>
                     <li>
@@ -95,11 +98,136 @@
             </div>
 
         </div>
-        <div class="container min-vh-100 bg-primary flex-grow-1">
+        <!-- Products Section -->
+        <div class="container-lg row m-auto vh-100 overflow-y-auto">
+            <div class="row mx-auto justify-content-center">
+                <div class="col-10 text-center pt-5 pb-4">
+                    <h1 class="mb-3">Crea nuovo prodotto</h1>
+                    <p class="lead">I campi contrassegnati con un asterisco (*) sono obbligatori. <br>
 
+                        Le immagini devono essere in formato PNG e non devono superare i 4 MB di dimensione
+                    </p>
+                </div>
+                <!-- New product form -->
+                <div class="col-12 col-lg-6 py-2">
+                    <!-- Product Name -->
+                    <div class="mb-3 row">
+                        <div class="col-12 col-md-4">
+                            <label for="product-name" class="form-label">Nome</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <input type="text" class="form-control" id="product-name"
+                                placeholder="Samsung Galaxy 10 Plus">
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Price -->
+                    <div class="mb-3 row">
+                        <div class="col-12 col-md-4">
+                            <label for="price" class="form-label">Prezzo</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <input type="number" class="form-control" id="price" placeholder="99.00">
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Brand dropdown -->
+                    <div class="mb-3 row">
+                        <div class="col-12 col-md-4">
+                            <label for="select-label" class="form-label">Marca</label>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <select id="select-label" class="form-select" aria-label="Default select example">
+                                <option selected>-- Seleziona --</option>
+                                <option value="1">Apple</option>
+                                <option value="2">Samsung</option>
+                                <option value="3">Asus</option>
+                                <option value="4">HP</option>
+                                <option value="5">Western Digital</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Text area -->
+                    <div class="mb-3">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
+                            placeholder=""></textarea>
+                    </div>
+                    <!-- Input img -->
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile02">
+                        <label class="input-group-text" for="inputGroupFile02">Immagine</label>
+                    </div>
+                    <!-- Availability buttons -->
+                    <div class="col-12">
+                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group" role="group" aria-label="First group">
+                                <button type="button" class="btn btn-outline-secondary">Disponibile</button>
+                                <button type="button" class="btn btn-outline-secondary">Esaurito</button>
+                                <button type="button" class="btn btn-outline-secondary">Fuori produzione</button>
+                                <button type="button" class="btn btn-outline-secondary">In arrivo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- List of options -->
+                <div class="d-flex flex-column col-12 col-lg-6 py-2">
+                    <div class="list-group">
+                        <label class="list-group-item d-flex gap-2">
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked="">
+                            <div>
+                                <span class="fw-semibold">fotocamera principale</span>
+                                <small class="d-block text-body-secondary">foto di alta qualità e registrare video
+                                    nitidi</small>
+                            </div>
+                        </label>
+                        <label class="list-group-item d-flex gap-2">
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                            <div>
+                                <span class="fw-semibold">schermo OLED</span>
+                                <small class="d-block text-body-secondary">offre colori vividi per un'esperienza visiva
+                                    straordinaria.</small>
+                            </div>
+                        </label>
+                        <label class="list-group-item d-flex gap-2">
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                            <div>
+                                <span class="fw-semibold">processore Octa-core</span>
+                                <small class="d-block text-body-secondary">prestazioni fluide e veloci per eseguire le
+                                    applicazioni più esigenti</small>
+                            </div>
+                        </label>
+                        <label class="list-group-item d-flex gap-2">
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                            <div>
+                                <span class="fw-semibold">ricarica wireless</span>
+                                <small class="d-block text-body-secondary">consente di ricaricare lo smartphone
+                                    comodamente senza l'uso di cavi</small>
+                            </div>
+                        </label>
+                        <label class="list-group-item d-flex gap-2">
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                            <div>
+                                <span class="fw-semibold">connessione 5G</span>
+                                <small class="d-block text-body-secondary">navigazione ultra veloce e streaming senza
+                                    interruzioni</small>
+                            </div>
+                        </label>
+                        <label class="list-group-item d-flex gap-2">
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                            <div>
+                                <span class="fw-semibold">tecnologia NFC</span>
+                                <small class="d-block text-body-secondary">per effettuare pagamenti senza
+                                    contatto</small>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- Save Button -->
+            <div class="col-12 ms-3 mb-5">
+                <button type="button" class="btn btn-primary">Salva</button>
+            </div>
         </div>
-
-
     </main>
     <!-- js boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
